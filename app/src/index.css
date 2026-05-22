@@ -240,7 +240,6 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
-  .sidebar { display: none; }
   .main-content { width: 100%; margin-left: 0; padding: 0; }
   .page-wrapper { padding: 20px 0 70px 0; max-width: 100%; box-sizing: border-box; }
   .section { max-width: 100%; padding: 0 16px; box-sizing: border-box; }

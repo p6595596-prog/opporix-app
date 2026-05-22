@@ -168,6 +168,16 @@
     padding: 10px 16px; 
     box-sizing: border-box; 
   }
+  .menu-btn { 
+    display: flex; 
+    align-items: center; 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 24px; 
+    cursor: pointer; 
+    padding: 8px; 
+  }
   .header-search { flex: 1; min-width: 0; margin: 0 12px; }
   .live-badge { display: none; }
 }

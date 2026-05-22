@@ -130,12 +130,24 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar { width: 260px; }
+  .sidebar { 
+    position: fixed; 
+    left: -280px; 
+    top: 0; 
+    height: 100vh; 
+    width: 280px; 
+    z-index: 1000; 
+    transition: left 0.3s ease; 
+    background: #0d1117; 
+  }
+  .sidebar.open { left: 0; }
   .sidebar-overlay {
-    display: block;
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 99;
-    backdrop-filter: blur(4px);
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh;
+    background: rgba(0,0,0,0.5); 
+    z-index: 999;
   }
 }
