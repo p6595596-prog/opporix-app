@@ -174,14 +174,12 @@ export default function OpportunityCard({ opp, userProfile, delay = 0, applicati
           {expanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
           {expanded ? 'Less' : 'Details & Eligibility'}
         </button>
-        <a
-          href={opp.applyLink}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => window.open(opp.applyLink, '_blank', 'noopener,noreferrer')}
           className="btn btn-primary btn-sm"
         >
           Apply Now <ExternalLink size={13} />
-        </a>
+        </button>
       </div>
     </div>
   );
