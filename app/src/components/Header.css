@@ -159,6 +159,5 @@
 
 @media (max-width: 900px) {
   .top-header { padding: 12px 16px; }
-  .menu-btn { display: flex; }
   .live-badge { display: none; }
 }

@@ -240,8 +240,8 @@ body {
 @media (max-width: 900px) {
   :root { --sidebar-w: 0px; }
   .main-content { margin-left: 0; }
-  .sidebar { transform: translateX(-100%); }
+  .sidebar { transform: translateX(-100%); display: none; }
   .sidebar.open { transform: translateX(0); }
-  .page-wrapper { padding: 20px 16px; }
+  .page-wrapper { padding: 20px 16px 85px 16px; }
   .cards-grid { grid-template-columns: 1fr; }
 }

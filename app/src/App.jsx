@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GraduationCap, Briefcase, FileText, Rocket, Award, BookmarkCheck } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import BottomNav from './components/BottomNav';
 import Dashboard from './pages/Dashboard';
 import OpportunitiesList from './pages/OpportunitiesList';
 import Profile from './pages/Profile';
@@ -10,6 +11,7 @@ import Vault from './pages/Vault';
 import Login from './pages/Login';
 import Chatbot from './components/Chatbot';
 import ProtectedRoute from './components/ProtectedRoute';
+import InstallGate from './components/InstallGate';
 import { AuthProvider } from './contexts/AuthContext';
 import { fetchOpportunities } from './services/api';
 import { opportunities as fallbackData } from './data/mockData';
@@ -129,6 +131,9 @@ function AppContent() {
         
         {/* Floating AI Chatbot */}
         <Chatbot userProfile={userProfile} />
+        
+        {/* Mobile Bottom Navigation */}
+        <BottomNav />
       </div>
     </div>
   );
@@ -141,9 +146,11 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/*" element={
-            <ProtectedRoute>
-              <AppContent />
-            </ProtectedRoute>
+            <InstallGate>
+              <ProtectedRoute>
+                <AppContent />
+              </ProtectedRoute>
+            </InstallGate>
           } />
         </Routes>
       </BrowserRouter>
