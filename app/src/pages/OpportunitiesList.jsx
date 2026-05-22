@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import OpportunityCard from '../components/OpportunityCard';
 import { isGoodMatch } from '../utils/match';
@@ -42,6 +43,15 @@ export default function OpportunitiesList({ opportunities, type, title, icon: Ic
           <h1 className="list-title">{title}</h1>
           <p className="list-sub">{filtered.length} opportunities found</p>
         </div>
+      </div>
+
+      {/* Category Navigation (Horizontal Scroll) */}
+      <div className="category-nav">
+        <Link to="/scholarships" className={`cat-pill ${type === 'scholarship' ? 'active' : ''}`}>Scholarships</Link>
+        <Link to="/jobs" className={`cat-pill ${type === 'job' ? 'active' : ''}`}>Govt. Jobs</Link>
+        <Link to="/exams" className={`cat-pill ${type === 'exam' ? 'active' : ''}`}>Exams</Link>
+        <Link to="/internships" className={`cat-pill ${type === 'internship' ? 'active' : ''}`}>Internships</Link>
+        <Link to="/fellowships" className={`cat-pill ${type === 'fellowship' ? 'active' : ''}`}>Fellowships</Link>
       </div>
 
       {/* Filters */}

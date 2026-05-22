@@ -150,6 +150,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   flex: 1;
+  min-width: 0;
 }
 .alert-scroll::-webkit-scrollbar { display: none; }
 
