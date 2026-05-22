@@ -61,6 +61,7 @@
   align-items: center;
   gap: 12px;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .live-badge {
@@ -84,7 +85,7 @@
   box-shadow: 0 0 8px #10b981;
 }
 
-.notif-wrap { position: relative; }
+.notif-wrap { position: relative; flex-shrink: 0; }
 
 .notif-btn { position: relative; }
 
@@ -154,10 +155,19 @@
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(59,91,255,0.35);
   transition: var(--transition);
+  flex-shrink: 0;
 }
 .header-avatar:hover { transform: scale(1.08); }
 
-@media (max-width: 900px) {
-  .top-header { padding: 12px 16px; }
+@media (max-width: 768px) {
+  .top-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 10px 16px; 
+    box-sizing: border-box; 
+  }
+  .header-search { flex: 1; min-width: 0; margin: 0 12px; }
   .live-badge { display: none; }
 }

@@ -129,7 +129,7 @@
   margin-top: 2px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .sidebar { width: 260px; }
   .sidebar-overlay {
     display: block;
